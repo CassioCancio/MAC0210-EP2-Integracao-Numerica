@@ -7,11 +7,11 @@ double * X, * F;
 
 void imprimirPolinomio(double * coef){
     // Imprime o polinômio de forma mais visível.
-    printf("P(x) = ");
+    printf("P(x) =");
     for (int i = N-1; i >= 0; i--){
-        if(coef[i] > 0) printf("+ ");
+        if(coef[i] > 0) printf("+");
         else if(coef[i] == 0) continue;
-        printf("%.8g*x^%d ",coef[i],i);
+        printf("%.12f*x^%d",coef[i],i);
     } printf("\n\n");
 }
 
@@ -40,7 +40,7 @@ double * polinomioInterpolador(){
         for (int j = 0; j < N; j++){
             if(i == j) continue;
 
-            // Constroi denominador de L_i
+            // Constrói denominador de L_i
             denominador *= (X[i] - X[j]); 
 
             // Faz o polinômio L_i*x

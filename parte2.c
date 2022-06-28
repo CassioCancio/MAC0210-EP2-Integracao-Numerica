@@ -54,7 +54,6 @@ double pi(int a, int b, int n){
         if(x*x+y*y<=1){
             ans+=1;
         }
-
     }
     return 4*ans/n;
 }
